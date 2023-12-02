@@ -8,32 +8,22 @@ class GY{
 public class RaceCode {
     public static void main(String [] args){
        GY obj = new GY();
-//        Runnable obj1 = () ->
-//        {
-//            for(int i=1;i<=1000;i++)
-//            {
-//               obj.increment();
-//            }
-//        };
-//        Runnable obj2 = () ->
-//        {
-//            for(int i=1;i<=1000;i++)
-//            {
-//                obj.increment();
-//            }
-//        };
-        Runnable obj3 = () -> {
-            for(int i=1;i<=1000;i++){
+        Runnable obj1 = () ->
+        {
+            for(int i=1;i<=1000;i++)
+            {
+               obj.increment();
+            }
+        };
+        Runnable obj2 = () ->
+        {
+            for(int i=1;i<=1000;i++)
+            {
                 obj.increment();
             }
         };
-        Runnable obj4 = () -> {
-            for(int i=1;i<=1000;i++){
-                obj.increment();
-            }
-        };
-        Thread t1 = new Thread(obj3);
-        Thread t2 = new Thread(obj4);
+        Thread t1 = new Thread(obj1);
+        Thread t2 = new Thread(obj2);
         t1.start();
         t2.start();
         try {

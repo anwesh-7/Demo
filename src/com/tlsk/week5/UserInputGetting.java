@@ -11,7 +11,7 @@ public class UserInputGetting {
         // Process of getting user input.
         System.out.println("User Input using read : ");
          int i = System.in.read(); // By default, read is int type.
-        System.out.println(i);
+        System.out.println(i); // It returns Hashcode of input
     }
     public void getUserInput1() throws IOException {
         System.out.println("User Input using readLine : ");
